@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChildCaseMgt.View.ChildrenLearning"
+             xmlns:locals="clr-namespace:ChildCaseMgt.ViewModels" xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             Title="All Children Learning Form!">
+    <ContentPage.BindingContext>
+        <locals:ChildrenLearningData>
+            
+        </locals:ChildrenLearningData>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+                <Label Text="General Information" FontSize="25" TextColor="Black" HorizontalOptions="CenterAndExpand" Margin="10,10"></Label>
+                <Grid 
+                Margin="15,0,15,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Row="0" Grid.Column="0" Margin="12,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Name" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Name">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="NameCL" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="0" Margin="12,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Age" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Age">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="AgeCL" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="0" Margin="12,30,0,0" HorizontalOptions="Center">
+                        <Label Text="Gender" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="GenderChild">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="1" Margin="70,20,0,0">
+                        <RadioButton Content="Male" Value="Male" x:Name="GenderCL1"/>
+                        <RadioButton Content="Female" Value="Female" x:Name="GenderCL2"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="0" Margin="6,30,0,0" HorizontalOptions="Center">
+                        <Label Text="Education Level" FontSize="19" FontAttributes="Bold" TextColor="Black" x:Name="EducationCL">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="1" Margin="70,20,0,0">
+                        <RadioButton Content="Primary" Value="Primary" x:Name="EducationCL1"/>
+                        <RadioButton Content="Secondary" Value="Secondary" x:Name="EducationCL2"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="4" Grid.Column="0" Margin="12,35,0,0" HorizontalOptions="Center">
+                        <Label Text="Province" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="ProvinceCL">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="4" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Picker ItemDisplayBinding="{Binding p_Name}" x:Name="Province" Title="Select Province" ItemsSource="{Binding ProvinceList}"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="5" Grid.Column="0" Margin="5,30,0,0" HorizontalOptions="Center">
+                        <Label Text="Currently Enrolled?" FontSize="19" FontAttributes="Bold" TextColor="Black" x:Name="EnrollmentCL">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="5" Grid.Column="1" Margin="70,20,0,0">
+                        <RadioButton Content="Yes" Value="Yes" x:Name="EnrollCL1"/>
+                        <RadioButton Content="No" Value="No" x:Name="EnrollCL2"/>
+                    </StackLayout>
+
+                </Grid>
+                <Button Text="Save" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" x:Name="saveButton" Clicked="saveButton_Clicked"/>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

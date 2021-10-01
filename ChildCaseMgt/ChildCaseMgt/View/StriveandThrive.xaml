@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" xmlns:forms="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             x:Class="ChildCaseMgt.View.StriveandThrive"
+             
+             Title="Strive and Thrive Form!">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Nutritional Status" FontSize="25" TextColor="Black" HorizontalOptions="CenterAndExpand" Margin="10,10"></Label>
+                <Grid 
+                Margin="15,0,15,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <StackLayout Grid.Row="0" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Name" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Name">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="ChildName" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Age" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Age">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="ChildAge" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Height" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Height">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="ChildHeight" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Weight" FontSize="19" FontAttributes="Bold" TextColor="Black" x:Name="Weight">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="ChildWeight" >
+                        </Entry>
+                    </StackLayout>
+                </Grid>
+                <Label Text="Micronutrients Status" TextColor="Black" FontSize="25" HorizontalOptions="Center" Margin="10,10"></Label>
+                <Grid 
+                Margin="15,0,15,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Row="0" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Iron" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Iron">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="IronProp" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Vitamin A" FontSize="16" FontAttributes="Bold" TextColor="Black" x:Name="VitA">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="AVit" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Aneamia" FontSize="17" FontAttributes="Bold" TextColor="Black" x:Name="Aneamia">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="AneamiaProp" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Zinc" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Zinc">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="ZincProp" >
+                        </Entry>
+                    </StackLayout>
+                </Grid>
+                <Label Text="Child Immunization" TextColor="Black" FontSize="25" HorizontalOptions="Center" Margin="10,10"></Label>
+                <Grid 
+                Margin="15,0,15,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Row="0" Grid.Column="0" Margin="12,12" HorizontalOptions="Center">
+                        <Label Text="Polio" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Polio">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1"  Margin="70,12,0,0" VerticalOptions="Center">
+
+                        <RadioButton Content="Yes" Value="Yes" x:Name="Polio1"/>
+                        <RadioButton Content="No" Value="No" x:Name="Polio2"/>
+                        
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.Column="0" Margin="4,12,0,0" HorizontalOptions="Center">
+                        <Label Text="Hepatitis" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Hepatitis">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1"  Margin="70,12,0,0"  VerticalOptions="Center">
+
+                        <RadioButton Content="Yes" Value="Yes" x:Name="Hepatits1"/>
+                        <RadioButton Content="No" Value="No" x:Name="Hepatits2"/>
+
+                    </StackLayout>
+                    
+
+                </Grid>
+                <Button Text="Save" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" Clicked="saveButton_Clicked"/>
+                
+                <StackLayout>
+                    <Label Text="Teenage Pregnancy and Motherhood" TextColor="Black" FontSize="25" FontAttributes="Bold"/>
+                    <Label Text="AGE" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <microcharts:ChartView x:Name="chartViewBar1" HeightRequest="400" WidthRequest="200"  Rotation="0" Opacity="50" MinimumWidthRequest="20" Margin="40,50"/>
+                    <Label Text="WEALTH QUINTILE" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <microcharts:ChartView x:Name="chartViewBar2" HeightRequest="400" WidthRequest="200" Rotation="0"  MinimumWidthRequest="40" Margin="40,50"/>
+                    <Label Text="EDUCATION" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                    <microcharts:ChartView x:Name="chartViewBar3" HeightRequest="400" WidthRequest="200" Rotation="0" MinimumWidthRequest="40" Margin="40,50" />
+                    
+                    <Button Text="Birth Registration Across Provinces" HorizontalOptions="CenterAndExpand" Margin="0,0,0,0" x:Name="statsButton" Clicked="statsButton_Clicked"/>
+                
+                
+                </StackLayout>
+            </StackLayout>
+
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

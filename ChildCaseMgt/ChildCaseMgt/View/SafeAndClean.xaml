@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChildCaseMgt.View.SafeAndClean"
+             xmlns:locals="clr-namespace:ChildCaseMgt.ViewModels"
+             Title="Safe and Clean Environment!">
+
+    <ContentPage.BindingContext>
+        <locals:ChildrenLearningData>
+
+        </locals:ChildrenLearningData>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+                <Label Text="General Information" TextColor="Blue" FontSize="25" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" />
+                <Grid Margin="15,0,15,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Row="0" Grid.Column="0" Margin="12,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Name" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="NameSC">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="ChildNameSC" >
+                        </Entry>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.Column="0" Margin="12,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Age" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="AgeSC">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Entry FontSize="20" FontAttributes="Bold"  x:Name="ChildAgeSC" >
+                        </Entry>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Grid.Column="0" Margin="12,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Province" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="Gender">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="1"  WidthRequest="280" VerticalOptions="Center">
+                        <Picker ItemDisplayBinding="{Binding p_Name}" x:Name="Province" Title="Select Province" ItemsSource="{Binding ProvinceList}"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" Grid.Column="0" Margin="10,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Area" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="AreaSC">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="1" Margin="70,10,0,0">
+                        <RadioButton Content="Urban" Value="Urban" x:Name="Area1"/>
+                        <RadioButton Content="Rural" Value="Rural" x:Name="Area2"/>
+                    </StackLayout>
+                </Grid>
+                <Label Text="Water Information" TextColor="Blue" FontSize="25" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="30,0,0,0" />
+                <Grid  Margin="15,0,15,0">
+                    <StackLayout Grid.Row="0" Grid.Column="0" Margin="10,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Water Avaiability?" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="AvailabilitySC">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1" Margin="70,10,0,0">
+                        <RadioButton Content="Yes" Value="Yes" x:Name="WAvail1"/>
+                        <RadioButton Content="No" Value="No" x:Name="WAvail2"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" Grid.Column="0" Margin="20,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Water Accessibility?" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="AccessibilitySC">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1" Margin="70,10,0,0">
+                        <RadioButton Content="Yes" Value="Yes" x:Name="WAccess1"/>
+                        <RadioButton Content="No" Value="No" x:Name="WAccess2"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Grid.Column="0" Margin="5,20,0,0" HorizontalOptions="Center">
+                        <Label Text="Water Quality?" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="QualitySC">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="1" Margin="70,10,0,0">
+                        <RadioButton Content="Good" Value="Good" x:Name="WQ1"/>
+                        <RadioButton Content="Bad" Value="Bad" x:Name="WQ2"/>
+                    </StackLayout>
+                
+                <StackLayout Grid.Row="3" Grid.Column="0" Margin="5,20,0,0" HorizontalOptions="Center">
+                    <Label Text="Do you have wash facilities in school?" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="WashSC"/>
+                </StackLayout>
+                <StackLayout Grid.Row="3" Grid.Column="1" Margin="70,10,0,0">
+                        <RadioButton Content="Yes" Value="Yes" x:Name="WF1"/>
+                        <RadioButton Content="No" Value="No" x:Name="WF2"/>
+                    </StackLayout>
+                </Grid>
+                <Button Text="Save" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" Clicked="saveButton_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
